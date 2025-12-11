@@ -18,7 +18,7 @@ public class JwtService {
     private final SecretKey SECRET_KEY = Keys.secretKeyFor(SignatureAlgorithm.HS256);
     
     // Token validity: 1 hour
-    private final long EXPIRATION_TIME = 1000 * 60 * 60;
+    private final long EXPIRATION_TIME = 1000 * 10;
 
     public String generateToken(String username, String role) {
         Map<String, Object> claims = new HashMap<>();
